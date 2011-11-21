@@ -1,0 +1,54 @@
+/*
+Toast Framework
+Colors
+
+Set some nice default colors and variations
+*/
+
+::selection {
+	background: #F8F7C9;
+	color: #CB9240;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #F8F7C9;
+	color: #CB9240;
+	text-shadow: none;
+}
+
+@red: #f64;
+@green: #bada55;
+@blue: #39c;
+
+@darkred: darken(@red, 20%);
+@darkgreen: darken(@green, 20%);
+@darkblue: darken(@blue, 20%);
+
+@black: #000;
+@dark: #333;
+@white: #fff;
+@light: #f6f6f6;
+
+@darkgray: lighten(@dark, 20%);
+@lightgray: lighten(@dark, 60%);
+
+body {
+	color: @dark;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	color: @black;
+}
+
+hr { /* not color, but fits in here better than anywhere else */
+	border: 0;
+	border-top: 1px solid @lightgray;
+	border-top-color: rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid @light;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	clear: both;
+	height: 0;
+	display: block;
+	margin: .75em 0 .75em 0;
+}

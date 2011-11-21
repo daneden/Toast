@@ -1,0 +1,27 @@
+html, body {
+  
+}
+
+/* HEADER */
+header[role="banner"] {
+  
+}
+	header[role="banner"] #logo {
+	  
+	}
+
+/* CONTENT */
+div[role="content"] {
+  padding-top: 1.5em;
+}
+
+/* FOOTER */
+footer[role="footer"] {
+  
+}
+
+/* MEDIA QUERIES */
+/* Mobile phones and tiny screens */
+@media screen and (max-width: 500px;) {
+  
+}

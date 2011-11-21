@@ -1,0 +1,47 @@
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+/*
+Toast Framework
+Colors
+
+Set some nice default colors and variations
+*/
+::selection {
+  background: #F8F7C9;
+  color: #CB9240;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: #F8F7C9;
+  color: #CB9240;
+  text-shadow: none;
+}
+body {
+  color: #333333;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  color: #000000;
+}
+hr {
+  /* not color, but fits in here better than anywhere else */
+
+  border: 0;
+  border-top: 1px solid #cccccc;
+  border-top-color: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #f6f6f6;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  clear: both;
+  height: 0;
+  display: block;
+  margin: .75em 0 .75em 0;
+}
