@@ -4,3 +4,6 @@ The Toast framework is a super simple toolkit to help rapid design and developme
 It's also fully responsive and compatible down to Internet Explorer 7.
 
 To learn more, go to http://daneden.me/toast
+
+## Licence
+The styles and code herein are released under http://unlicense.org/.
