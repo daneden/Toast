@@ -640,6 +640,9 @@ form input, form textarea {
   outline: 0;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
+form input[type="checbox"] {
+   -webkit-appearance: checkbox;
+}
 form textarea {
   resize: vertical;
   min-height: 64px;
