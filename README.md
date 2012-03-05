@@ -11,16 +11,16 @@ Using Toast is easy. First, link to toast.css in your HTML document's head:
 
 Then, to use the grid, you'll need a wrap and a grids container.
 
-```<div class="wrap">
-  <div class="grids">
-    <div class="grid-two-thirds">
+    <div class="wrap">
+      <div class="grids">
+        <div class="grid-two-thirds">
     
-    </div>
-    <div class="grid-4">
+        </div>
+        <div class="grid-4">
     
-    </div>
-  </div>
-</div>```
+        </div>
+      </div>
+    </div>```
 
 ## Licence
 The styles and code herein are released under http://unlicense.org/.
