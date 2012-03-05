@@ -1,11 +1,5 @@
-/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
 /*
-Toast Framework
-grid.less
-
-@width defines the overall grid width. The columns and gutters are 
-percentage-based, but at 940px the columns are 60px and the 
-gutters are 20px.
+Toast Framework - grid.css
 */
 .wrap {
   max-width: 940px;
@@ -18,7 +12,6 @@ Column container
 .grids {
   width: auto;
   max-width: 960px;
-  clear: both;
   margin: 0 0 0 -2.083%;
   list-style: none;
   /* So we can make grids out of lists. */
@@ -27,15 +20,17 @@ Column container
   /* Clear the floats */
 
 }
-[class^="grid-"] {
-  float: left;
-  margin: 0 2.083% 0 0;
-}
 .grids [class*="grid-"] {
-  margin: 0 0 0 2.083%;
+  display: inline-block;
+  margin: 0 0 0 1.7%;
+  -webkit-box-sizing: border-box; /* Allow padding & borders on grids without breaking. IE8+ */
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .grid-1 {
-  width: 6.25%;
+  width: 6.15%;
 }
 .grid-2 {
   width: 14.583%;
@@ -43,19 +38,19 @@ Column container
 .grid-3 {
   width: 22.917%;
 }
-.grid-4 {
+.grid-4, .grid-one-third {
   width: 31.25%;
 }
 .grid-5 {
   width: 39.583%;
 }
-.grid-6 {
+.grid-6, .grid-half {
   width: 47.917%;
 }
 .grid-7 {
   width: 56.25%;
 }
-.grid-8 {
+.grid-8, .grid-two-thirds {
   width: 64.583%;
 }
 .grid-9 {
@@ -76,7 +71,8 @@ Column container
     margin: 0;
     width: auto;
   }
-  [class*="grid-"] {
+  .grids [class*="grid-"] {
+    display: block;
     width: auto;
     margin: 0;
   }
