@@ -1,9 +1,26 @@
 # Toast Framework
-The Toast framework is a super simple toolkit to help rapid design and development. It includes a grid, OOCSS components, typographic baseline and gorgeous form design. Inspired by the likes of Twitter's Bootstrap, the Zerply OOCSS and the 960 grid system.
-
-It's also fully responsive and compatible down to Internet Explorer 7.
+The Toast framework is a super simple CSS framework with a reset, a grid, and type styles. IE8+.
 
 To learn more, go to http://daneden.me/toast
+
+## How to use
+
+Using Toast is easy. First, link to toast.css in your HTML document's head:
+
+```<link rel="stylesheet" href="toast/toast.css">```
+
+Then, to use the grid, you'll need a wrap and a grids container.
+
+```<div class="wrap">
+  <div class="grids">
+    <div class="grid-two-thirds">
+    
+    </div>
+    <div class="grid-4">
+    
+    </div>
+  </div>
+</div>```
 
 ## Licence
 The styles and code herein are released under http://unlicense.org/.
