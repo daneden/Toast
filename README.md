@@ -20,7 +20,7 @@ Then, to use the grid, you'll need a wrap and a grids container.
     
         </div>
       </div>
-    </div>```
+    </div>
 
 ## Licence
 The styles and code herein are released under http://unlicense.org/.
