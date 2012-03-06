@@ -28,6 +28,7 @@ Column container
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
+  vertical-align: top;
 }
 .grid-1 {
   width: 6.15%;
