@@ -22,5 +22,5 @@ Then, to use the grid, you'll need a wrap and a grids container.
       </div>
     </div>
 
-## Licence
-The styles and code herein are released under http://unlicense.org/.
+##License
+Animate.css is licensed under the &#9786; license. (http://licence.visualidiot.com/)
