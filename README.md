@@ -23,4 +23,4 @@ Then, to use the grid, you'll need a wrap and a grids container.
     </div>
 
 ##License
-Animate.css is licensed under the &#9786; license. (http://licence.visualidiot.com/)
+Toast is licensed under the &#9786; license. (http://licence.visualidiot.com/)
