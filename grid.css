@@ -19,6 +19,7 @@ Column container
   overflow: hidden;
   /* Clear the floats */
 
+  letter-spacing: -.25em; /* Fix inline-block weirdness */
 }
 .grids [class*="grid-"] {
   display: inline-block;
@@ -27,6 +28,7 @@ Column container
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   vertical-align: top;
+  letter-spacing: 0; /* And restore our letter spacing. */
 }
 .grid-1 {
   width: 6.15%;
