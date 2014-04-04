@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Toast • The no-nonsense CSS grid</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css' />
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600' rel='stylesheet' type='text/css' />
+</head>
+<body>
+  <div class="wrap">
+    <div class="grid">
+      <div class="grid__col--3-of-5 grid__col--centered">
+        <header class="site__header">
+          <h1 class="site__title">Toast</h1>
+          <span class="gamma site__desc">The no-nonsense CSS grid</span>
+        </header>
+      </div>
+      <div class="grid__col--3-of-5 grid__col--centered">
+        <section>
+          <h2>Unprecedented Control</h2>
+          <p>Twelve columns. Six columns. Nine columns. As many columns as you want, in as many combinations as you want.</p>
+          <pre class="code"><i>$col-groups:</i> (12, 6, 9);</pre>
+        </section>
+      </div>
+    </div>
+    <figure class="grid grid--demo">
+      <div class='grid__col--1-of-2'></div>
+      <div class='grid__col--1-of-2'></div>
+      <div class='grid__col--1-of-3'></div>
+      <div class='grid__col--2-of-3'></div>
+      <div class='grid__col--3-of-3'></div>
+      <div class='grid__col--1-of-3'></div>
+      <div class='grid__col--1-of-3'></div>
+      <div class='grid__col--1-of-3'></div>
+      <div class='grid__col--1-of-4'></div>
+      <div class='grid__col--1-of-4'></div>
+      <div class='grid__col--2-of-4'></div>
+      <div class='grid__col--3-of-4'></div>
+      <div class='grid__col--1-of-4'></div>
+      <div class='grid__col--1-of-4'></div>
+      <div class='grid__col--1-of-4'></div>
+      <div class='grid__col--1-of-4'></div>
+      <div class='grid__col--1-of-4'></div>
+      <div class='grid__col--1-of-5'></div>
+      <div class='grid__col--1-of-5'></div>
+      <div class='grid__col--2-of-5'></div>
+      <div class='grid__col--1-of-5'></div>
+      <div class='grid__col--3-of-5'></div>
+      <div class='grid__col--2-of-5'></div>
+      <div class='grid__col--3-of-5 grid__col--centered'></div>
+      <div class='grid__col--1-of-5'></div>
+      <div class='grid__col--1-of-5'></div>
+      <div class='grid__col--1-of-5'></div>
+      <div class='grid__col--1-of-5'></div>
+      <div class='grid__col--1-of-5'></div>
+      <div class='grid__col--1-of-6'></div>
+      <div class='grid__col--2-of-6'></div>
+      <div class='grid__col--3-of-6'></div>
+      <div class='grid__col--4-of-6'></div>
+      <div class='grid__col--2-of-6'></div>
+      <div class='grid__col--1-of-6'></div>
+      <div class='grid__col--1-of-6'></div>
+      <div class='grid__col--1-of-6'></div>
+      <div class='grid__col--1-of-6'></div>
+      <div class='grid__col--1-of-6'></div>
+      <div class='grid__col--1-of-6'></div>
+      <div class='grid__col--1-of-8'></div>
+      <div class='grid__col--2-of-8'></div>
+      <div class='grid__col--3-of-8'></div>
+      <div class='grid__col--2-of-8'></div>
+      <div class='grid__col--5-of-8'></div>
+      <div class='grid__col--3-of-8'></div>
+      <div class='grid__col--1-of-8'></div>
+      <div class='grid__col--1-of-8'></div>
+      <div class='grid__col--1-of-8'></div>
+      <div class='grid__col--1-of-8'></div>
+      <div class='grid__col--1-of-8'></div>
+      <div class='grid__col--1-of-8'></div>
+      <div class='grid__col--1-of-8'></div>
+      <div class='grid__col--1-of-8'></div>
+      <div class='grid__col--1-of-12'></div>
+      <div class='grid__col--2-of-12'></div>
+      <div class='grid__col--3-of-12'></div>
+      <div class='grid__col--4-of-12'></div>
+      <div class='grid__col--2-of-12'></div>
+      <div class='grid__col--5-of-12'></div>
+      <div class='grid__col--7-of-12'></div>
+      <div class='grid__col--6-of-12'></div>
+      <div class='grid__col--6-of-12'></div>
+      <div class='grid__col--12-of-12'></div>
+      <div class='grid__col--1-of-12'></div>
+      <div class='grid__col--1-of-12'></div>
+      <div class='grid__col--1-of-12'></div>
+      <div class="grid__col--6-of-12"></div>
+      <div class='grid__col--1-of-12'></div>
+      <div class='grid__col--1-of-12'></div>
+      <div class='grid__col--1-of-12'></div>
+    </figure>
+    <div class="grid">
+      <div class="grid__col--7-of-12">
+          <h2>Fixed width gutters</h2>
+          <p>No fluid gutter width bullcrap. This is the real deal. What you set is what you get.</p>
+          <pre><i>$gutter-width:</i> 20px;</pre>
+      </div>
+
+      <figure class="grid__col--5-of-12">
+        <div class="grid grid--demo">
+          <div class="grid__col--2-of-2"></div>
+
+          <div class="grid__col--1-of-2"></div>
+          <div class="grid__col--1-of-2"></div>
+
+          <div class="grid__col--1-of-3"></div>
+          <div class="grid__col--1-of-3"></div>
+          <div class="grid__col--1-of-3"></div>
+
+          <div class="grid__col--1-of-4"></div>
+          <div class="grid__col--1-of-4"></div>
+          <div class="grid__col--1-of-4"></div>
+          <div class="grid__col--1-of-4"></div>
+
+          <div class="grid__col--1-of-5"></div>
+          <div class="grid__col--1-of-5"></div>
+          <div class="grid__col--1-of-5"></div>
+          <div class="grid__col--1-of-5"></div>
+          <div class="grid__col--1-of-5"></div>
+        </div>
+      </figure>
+
+      <figure class="grid__col--5-of-12">
+        <div class="grid grid--demo">
+          <div class="grid__col--3-of-5"></div>
+          <div class="grid__col--1-of-5"></div>
+          <div class="grid__col--1-of-5"></div>
+
+          <div class="grid__col--3-of-4 grid__col--push-1-of-4"></div>
+
+          <div class="grid__col--2-of-3"></div>
+          <div class="grid__col--1-of-3"></div>
+
+          <div class="grid__col--1-of-2"></div>
+          <div class="grid__col--1-of-2"></div>
+
+          <div class="grid__col--2-of-2"></div>
+        </div>
+      </figure>
+
+      <div class="grid__col--7-of-12">
+          <h2>Easy to use, hard to break</h2>
+          <p>It takes just a few lines of code to start using Toast. And it’ll work all the way down to IE8.</p>
+          <pre>&lt;<i>div</i> class="<b>grid</b>"&gt;
+  &lt;<i>div</i> class="<b>grid__col--3-of-5 grid__col--centered</b>"&gt;
+    &lt;<i>p</i>&gt;Centered columns? No problem.&lt;/<i>p</i>&gt;
+  &lt;/<i>div</i>&gt;
+  &lt;<i>div</i> class="<b>grid__col--3-of-5 grid__col--push-1-of-5</b>"&gt;
+    &lt;<i>p</i>&gt;Push and pull columns in plain English.&lt;/<i>p</i>&gt;
+  &lt;/<i>div</i>&gt;
+&lt;/<i>div</i>&gt;
+</pre>
+      </div>
+
+      <div class="grid__col--3-of-5 grid__col--centered">
+        <h2>Limitless* possibilities</h2>
+        <p>Nested grids, custom namespaces, simple switches for features like pulls and pushes, responsive layouts, and more. Start using Toast today.</p>
+        <p class="promo"><a class="butt butt--primary" href="//github.com/daneden/toast">Download on GitHub</a> <a class="butt" href="//github.com/daneden/toast">Download Quickstart CSS</a></p>
+      </div>
+    </div>
+  </div>
+  <footer class="site__footer">
+    <div class="wrap">
+      <p>*Possibilities may or may not actually be limited. Another thing by <a href="//daneden.me">Daniel Eden</a>.<p>
+    </div>
+  </footer>
+</body>
+</html>
