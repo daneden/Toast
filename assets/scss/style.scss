@@ -5,7 +5,7 @@
 \*-----------------------------------*/
 
 $baseline: 1.4444rem;
-$baseline-unitless: 1.444;
+$baseline-unitless: 1.4444;
 
 /*-----------------------------------*\
 
@@ -26,7 +26,7 @@ p, ul, ol, table, hr, pre {
   margin-bottom: $baseline;
 }
 
-@import 'partials/grid';
+@import 'lib/all';
 
 /*-----------------------------------*\
 
@@ -37,9 +37,10 @@ p, ul, ol, table, hr, pre {
 h1, .alpha, %alpha {
   margin-bottom: $baseline*2;
 
-  font-size: $baseline*2;
-  font-weight: 100;
+  font-size: $baseline;
+  font-weight: 700;
   line-height: 1;
+  text-transform: uppercase;
   orphans: 3;
   widows: 3;
 
@@ -65,15 +66,13 @@ h3, .gamma, %gamma {
   padding-top: $baseline/2;
   margin-bottom: $baseline/2;
 
-  font-size: 1rem;
-  font-weight: 700;
   line-height: $baseline-unitless;
 }
 
 code, pre {
   font: 83.333%/1.5333 "Source Code Pro", Monaco, monospace;
 
-  background-color: rgba(0,0,0,.1);
+  background-color: #f6f7f8;
   border-radius: .25em;
 }
 
@@ -100,7 +99,7 @@ a {
   color: inherit;
 
   &:hover {
-    color: #5353c4;
+    color: lighten(#007ee5, 15%);
   }
 }
 
@@ -115,22 +114,23 @@ a {
   margin: $baseline/2;
   padding: $baseline/2 $baseline;
 
-  background-color: hsl(240, 5, 12);
-  background-image: -webkit-linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,0) 80%, rgba(255,255,255,.05));
-  border-radius: 100px;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), 0 1px 2px rgba(0,0,0,.1);
+  border-radius: .25em;
+  box-shadow: inset 0 0 0 1px lighten(#007ee5, 15%);
   text-decoration: none;
-  color: darken(#f6f8fa, 12%);
+  color: lighten(#007ee5, 15%);
 
   &:hover {
-    color: darken(#f6f8fa, 12%);
+    color: lighten(#007ee5, 15%);
   }
 }
 
   .butt--primary {
-    background-color: hsl(240, 50, 50);
-    background-image: -webkit-linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,0) 80%, rgba(255,255,255,.1));
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.1), 0 1px 2px rgba(0,0,0,.1);
+    background-color: lighten(#007ee5, 15%);
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
   }
 
 /*-----------------------------------*\
@@ -140,11 +140,15 @@ a {
 \*-----------------------------------*/
 
 html {
-  font: 112.5%/1.444444444 "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 112.5%/1.444444444 "Runda", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 
-  background-color: #25282b;
-  color: darken(#f6f8fa, 12%);
+  background-color: white;
+  color: #47525d;
+
+  @media (max-width: 700px) {
+    font-size: 93.75%;
+  }
 }
 
 /*-----------------------------------*\
@@ -157,7 +161,7 @@ html {
   padding-bottom: $baseline;
   margin-bottom: $baseline;
 
-  box-shadow: inset 0 -2px darken(#f6f8fa, 12%);
+  box-shadow: inset 0 -2px invert(darken(#f6f8fa, 12%));
 }
 
   .site__title {
@@ -178,7 +182,7 @@ html {
     margin-bottom: $baseline;
 
     background-clip: content-box;
-    background-color: hsla(240, 100, 90, ($i*0.02));
+    background-color: rgba(123, 137, 148, ($i*0.03));
   }
 }
 
@@ -198,8 +202,9 @@ html {
 
       font: 83.333%/1.5333 "Source Code Pro", Monaco, monospace;
 
-      background-color: transparentize(darken(#25282b, 5%), .2);
+      background-color: rgba(71,82,93,.8);
       border-radius: .25em;
+      color: #fff;
       opacity: 0;
       -webkit-transition: .3s cubic-bezier(0.905, -0.250, 0.520, 1.410);
       pointer-events: none;
@@ -223,7 +228,7 @@ html {
       z-index: 2;
 
       border: $baseline/2 solid transparent;
-      border-top-color: transparentize(darken(#25282b, 5%), .2);
+      border-top-color: rgba(71,82,93,.8);
       opacity: 0;
       -webkit-transition: .3s cubic-bezier(0.905, -0.250, 0.520, 1.410);
       pointer-events: none;
@@ -236,6 +241,10 @@ html {
       -webkit-transform: translateX(-50%);
     }
   }
+
+  @media (max-width: 700px) {
+    display: none;
+  }
 }
 
 /*-----------------------------------*\
@@ -245,6 +254,15 @@ html {
 \*-----------------------------------*/
 
 .site__footer {
-  background-color: rgba(0,0,0,.2);
-  color: transparentize(darken(#f6f8fa, 12%), .5);
+  background-color: #47525d;
+  background-image: linear-gradient(rgba(200,255,255,0), rgba(200,255,255,.1));
+  color: transparentize(#eceded, .2);
+
+  a:hover {
+    color: lighten(#007ee5, 15%);
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
 }

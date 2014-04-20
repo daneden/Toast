@@ -1,4 +1,44 @@
-/*---------------------------------------------------*/
+/*-----------------------------------*\
+
+  $TOAST-GRID
+
+  An insane grid.
+  You'd be mad to use it.
+
+  Usage
+  =====
+
+  Assuming default values:
+
+  <div class="grid">
+    <div class="grid__col grid__col--1-of-2">
+      A half-width column.
+    </div>
+    <div class="grid__col grid__col--1-of-4 grid__col--pull-1-of-4">
+      A quarter, pulled left by its own width. You get this, right?
+    </div>
+  </div>
+
+
+  Customisation
+  =============
+
+  $grid-namespace and $grid-column-namespace
+  adjusts the class names for the grid. With
+  default values, grid wrappers have a class
+  of '.grid' and columns '.grid__col'.
+
+  $col-groups(n) adjusts column divisions.
+  For example, $col-groups(12) will produce
+  a 12-column grid. $col-groups(3,6,8)
+  will produce a 3-, 6-, and 8-column grid.
+
+  $gutter-width is—you guessed it—the gutter
+  width. Accepts any unit.
+
+  That's it. Have fun.
+
+\*-----------------------------------*/
 
 // Namespaces
 // This stops me from being overzealous with enforcing classes
@@ -133,7 +173,9 @@ $gutter-width: 20px;
   // All direct descendents of .grid get treated the same way.
   // This might be overkill for some, but it’s a time-saver for me.
   > *, %#{$grid-column-namespace}, %span-all {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
     display: inline-block;
     margin-right: -.25em;
     min-height: 1px;
@@ -149,6 +191,7 @@ $gutter-width: 20px;
     }
   }
 
+  // Centers the column in the grid and clears the row of all other columns
   .#{$grid-column-namespace}--centered {
     display: block;
     margin-left: auto;
@@ -162,15 +205,18 @@ $gutter-width: 20px;
   }
 
 
+  // Displays the column as the first in its row
   .#{$grid-column-namespace}--d-first {
     float: left;
   }
 
+  // Displays the column as the last in its row
   .#{$grid-column-namespace}--d-last {
     float: right;
   }
 
-  &--no-gutter {
+  // Removes gutters from the columns
+  &.grid--no-gutter {
     margin-left: 0;
     width: 100%;
 
@@ -178,17 +224,20 @@ $gutter-width: 20px;
       padding-left: 0;
     }
 
-    .#{$grid-column-namespace}--span-all, & > .span-all {
+    .#{$grid-column-namespace}--span-all {
       margin-left: 0;
       width: 100%;
     }
   }
 
-  // Align column to the bottom. Useful for aligned promo images.
-  .#{$grid-column-namespace}--align-bottom {
+  // Align column to the bottom.
+  .#{$grid-column-namespace}--ab {
     vertical-align: bottom;
   }
 
-}
+  // Align column to the middle.
+  .#{$grid-column-namespace}--am {
+    vertical-align: middle;
+  }
 
-/*---------------------------------------------------*/
+}
