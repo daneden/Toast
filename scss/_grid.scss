@@ -1,0 +1,243 @@
+/*-----------------------------------*\
+
+  $TOAST-GRID
+
+  An insane grid.
+  You'd be mad to use it.
+
+  Usage
+  =====
+
+  Assuming default values:
+
+  <div class="grid">
+    <div class="grid__col grid__col--1-of-2">
+      A half-width column.
+    </div>
+    <div class="grid__col grid__col--1-of-4 grid__col--pull-1-of-4">
+      A quarter, pulled left by its own width. You get this, right?
+    </div>
+  </div>
+
+
+  Customisation
+  =============
+
+  $grid-namespace and $grid-column-namespace
+  adjusts the class names for the grid. With
+  default values, grid wrappers have a class
+  of '.grid' and columns '.grid__col'.
+
+  $col-groups(n) adjusts column divisions.
+  For example, $col-groups(12) will produce
+  a 12-column grid. $col-groups(3,6,8)
+  will produce a 3-, 6-, and 8-column grid.
+
+  $gutter-width is—you guessed it—the gutter
+  width. Accepts any unit.
+
+  That's it. Have fun.
+
+\*-----------------------------------*/
+
+// Namespaces
+// This stops me from being overzealous with enforcing classes
+$grid-namespace: "grid";
+$grid-column-namespace: "grid__col";
+
+// $col-groups are the column groups you want
+// For example, $col-groups: (3, 4, 5) will output:
+// .grid__col--n-of-3, .grid__col--n-of-4, [...]
+$col-groups: (2, 3, 4, 5, 6, 8, 12);
+
+// Gutter width
+$gutter-width: 20px;
+
+.#{$grid-namespace} {
+  list-style: none;
+  margin-left: -$gutter-width;
+
+  > %span-all       { width: percentage(1/1); }
+
+  > %one-half       { width: percentage(1/2); }
+
+  > %one-third      { width: percentage(1/3); }
+  > %two-thirds     { width: percentage(2/3); }
+
+  > %one-quarter    { width: percentage(1/4); }
+  > %two-quarters   { width: percentage(2/4); }
+  > %three-quarters { width: percentage(3/4); }
+
+  > %push-span-all       { margin-left: percentage(1/1); }
+
+  > %push-one-half       { margin-left: percentage(1/2); }
+
+  > %push-one-third      { margin-left: percentage(1/3); }
+  > %push-two-thirds     { margin-left: percentage(2/3); }
+
+  > %push-one-quarter    { margin-left: percentage(1/4); }
+  > %push-two-quarters   { margin-left: percentage(2/4); }
+  > %push-three-quarters { margin-left: percentage(3/4); }
+
+  > %pull-span-all       { margin-left: -(percentage(1/1)); }
+
+  > %pull-one-half       { margin-left: -(percentage(1/2)); }
+
+  > %pull-one-third      { margin-left: -(percentage(1/3)); }
+  > %pull-two-thirds     { margin-left: -(percentage(2/3)); }
+
+  > %pull-one-quarter    { margin-left: -(percentage(1/4)); }
+  > %pull-two-quarters   { margin-left: -(percentage(2/4)); }
+  > %pull-three-quarters { margin-left: -(percentage(3/4)); }
+
+  // For each of our column groups...
+  @each $group in $col-groups {
+
+    // For each column width from 1 to the column group...
+    @for $i from 1 through $group {
+      > .#{$grid-column-namespace}--#{$i}-of-#{$group} {
+        @extend %#{$grid-column-namespace};
+
+        @if percentage($i/$group) == percentage(1/1) {
+          @extend %span-all;
+        } @else if percentage($i/$group) == percentage(1/2) {
+          @extend %one-half;
+        } @else if percentage($i/$group) == percentage(1/3) {
+          @extend %one-third;
+        } @else if percentage($i/$group) == percentage(2/3) {
+          @extend %two-thirds;
+        } @else if percentage($i/$group) == percentage(1/4) {
+          @extend %one-quarter;
+        } @else if percentage($i/$group) == percentage(2/4) {
+          @extend %two-quarters;
+        } @else if percentage($i/$group) == percentage(3/4) {
+          @extend %three-quarters;
+        } @else {
+
+          width: percentage($i/$group);
+
+        }
+      }
+
+      > .#{$grid-column-namespace}--push-#{$i}-of-#{$group} {
+        @extend %#{$grid-column-namespace};
+
+        @if percentage($i/$group) == percentage(1/1) {
+          @extend %push-span-all;
+        } @else if percentage($i/$group) == percentage(1/2) {
+          @extend %push-one-half;
+        } @else if percentage($i/$group) == percentage(1/3) {
+          @extend %push-one-third;
+        } @else if percentage($i/$group) == percentage(2/3) {
+          @extend %push-two-thirds;
+        } @else if percentage($i/$group) == percentage(1/4) {
+          @extend %push-one-quarter;
+        } @else if percentage($i/$group) == percentage(2/4) {
+          @extend %push-two-quarters;
+        } @else if percentage($i/$group) == percentage(3/4) {
+          @extend %push-three-quarters;
+        } @else {
+
+          margin-left: percentage($i/$group);
+
+        }
+      }
+
+      > .#{$grid-column-namespace}--pull-#{$i}-of-#{$group} {
+        @extend %#{$grid-column-namespace};
+
+        @if percentage($i/$group) == percentage(1/1) {
+          @extend %pull-span-all;
+        } @else if percentage($i/$group) == percentage(1/2) {
+          @extend %pull-one-half;
+        } @else if percentage($i/$group) == percentage(1/3) {
+          @extend %pull-one-third;
+        } @else if percentage($i/$group) == percentage(2/3) {
+          @extend %pull-two-thirds;
+        } @else if percentage($i/$group) == percentage(1/4) {
+          @extend %pull-one-quarter;
+        } @else if percentage($i/$group) == percentage(2/4) {
+          @extend %pull-two-quarters;
+        } @else if percentage($i/$group) == percentage(3/4) {
+          @extend %pull-three-quarters;
+        } @else {
+
+          margin-left: -(percentage($i/$group));
+
+        }
+      }
+    } // end @for
+
+  } // end @each
+
+  // All direct descendents of .grid get treated the same way.
+  // This might be overkill for some, but it’s a time-saver for me.
+  > *, %#{$grid-column-namespace}, %span-all {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    display: inline-block;
+    margin-right: -.25em;
+    min-height: 1px;
+    padding-left: $gutter-width;
+    vertical-align: top;
+
+    @media screen and (max-width: 700px) {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      width: auto;
+    }
+  }
+
+  // Centers the column in the grid and clears the row of all other columns
+  .#{$grid-column-namespace}--centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  @media screen and (max-width: 700px) {
+    margin-left: 0;
+    width: auto;
+  }
+
+
+  // Displays the column as the first in its row
+  .#{$grid-column-namespace}--d-first {
+    float: left;
+  }
+
+  // Displays the column as the last in its row
+  .#{$grid-column-namespace}--d-last {
+    float: right;
+  }
+
+  // Removes gutters from the columns
+  &.grid--no-gutter {
+    margin-left: 0;
+    width: 100%;
+
+    > * {
+      padding-left: 0;
+    }
+
+    .#{$grid-column-namespace}--span-all {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  // Align column to the bottom.
+  .#{$grid-column-namespace}--ab {
+    vertical-align: bottom;
+  }
+
+  // Align column to the middle.
+  .#{$grid-column-namespace}--am {
+    vertical-align: middle;
+  }
+
+}
