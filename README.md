@@ -40,4 +40,38 @@ Then, to use the grid, you'll need a wrap (provided in your own CSS) and a `.gri
 `$gutter-width` is—you guessed it—the gutter
 width. Accepts any unit.
 
+`$breakpoint-medium` and `$breakpoint-small` are breakpoint placeholders. Columns have hooks to change their behaviour under these breakpoints. See the “Modifiers” section below.
+
+## Modifiers
+
+Toast has some modifiers to make different kinds of layouts easier. There are breakpoint hooks to have columns behave differently than their default behaviour under breakpoints:
+
+```html
+<div class="grid">
+  <div class="grid__col--1-of-3 grid__col--m-1-of-2 grid__col--s-1-of-2">
+    This column will behave like a 1-of-2 column under the medium breakpoint and the small breakpoint.
+  </div>
+
+  <div class="grid__col--1-of-3 grid__col--ab">
+    This column aligns to the bottom of its row.
+  </div>
+
+  <div class="grid__col--1-of-3 grid__col--am">
+    This column aligns to the middle of its row.
+  </div>
+
+  <div class="grid__col--3-of-5 grid__col--centered">
+    This column is centered and alone in its row.
+  </div>
+
+  <div class="grid__col--1-of-2 grid__col--d-last">
+    This column comes first in the DOM, but appears last in its row.
+  </div>
+
+  <div class="grid__col--1-of-2 grid__col--d-first">
+    This column appears last in the DOM, but appears first in its row.
+  </div>
+</div>
+```
+
 That’s it. Have fun.
