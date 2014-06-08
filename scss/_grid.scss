@@ -183,12 +183,14 @@ $breakpoint-small: 480px;
     padding-left: $gutter-width;
     vertical-align: top;
 
-    @media (max-width: $breakpoint-medium) and (max-width: $breakpoint-small) {
+    @media (max-width: $breakpoint-medium) {
       display: block;
       margin-left: 0;
       margin-right: 0;
       width: auto;
+    }
 
+    @media (max-width: $breakpoint-medium) and (min-width: $breakpoint-small) {
       &[class*="grid__col--m-"] {
         display: inline-block;
         margin-right: -.24em;
