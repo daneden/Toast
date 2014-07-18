@@ -191,7 +191,7 @@ $breakpoint-small: 480px;
     }
 
     @media (max-width: $breakpoint-medium) and (min-width: $breakpoint-small) {
-      &[class*="grid__col--m-"] {
+      &[class*="#{$grid-column-namespace}--m-"] {
         display: inline-block;
         margin-right: -.24em;
       }
@@ -222,7 +222,7 @@ $breakpoint-small: 480px;
     }
 
     @media (max-width: $breakpoint-small) {
-      &[class*="grid__col--s-"] {
+      &[class*="#{$grid-column-namespace}--s-"] {
         display: inline-block;
         margin-right: -.24em;
       }
