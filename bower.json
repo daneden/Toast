@@ -1,5 +1,5 @@
 {
-  "name": "toast",
+  "name": "toast-css",
   "version": "1.0.0",
   "main": [
     "scss/_grid.scss"
