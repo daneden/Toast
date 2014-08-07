@@ -191,7 +191,7 @@ $breakpoint-small: 480px;
     }
 
     @media (max-width: $breakpoint-medium) and (min-width: $breakpoint-small) {
-      &[class*="grid__col--m-"] {
+      &[class*="#{$grid-column-namespace}--m-"] {
         display: inline-block;
         margin-right: -.24em;
       }
@@ -204,7 +204,7 @@ $breakpoint-small: 480px;
         width: percentage(1/3);
       }
 
-      &.#{$grid-column-namespace}--m-1-of-3 {
+      &.#{$grid-column-namespace}--m-2-of-3 {
         width: percentage(2/3);
       }
 
@@ -222,7 +222,7 @@ $breakpoint-small: 480px;
     }
 
     @media (max-width: $breakpoint-small) {
-      &[class*="grid__col--s-"] {
+      &[class*="#{$grid-column-namespace}--s-"] {
         display: inline-block;
         margin-right: -.24em;
       }
@@ -235,7 +235,7 @@ $breakpoint-small: 480px;
         width: percentage(1/3);
       }
 
-      &.#{$grid-column-namespace}--s-1-of-3 {
+      &.#{$grid-column-namespace}--s-2-of-3 {
         width: percentage(2/3);
       }
 
