@@ -42,20 +42,20 @@
 
 // Namespaces
 // This stops me from being overzealous with enforcing classes
-$grid-namespace: "grid";
-$grid-column-namespace: "grid__col";
+$grid-namespace: "grid" !default;
+$grid-column-namespace: "grid__col" !default;
 
 // $col-groups are the column groups you want
 // For example, $col-groups: (3, 4, 5) will output:
 // .grid__col--n-of-3, .grid__col--n-of-4, [...]
-$col-groups: (2, 3, 4, 5, 6, 8, 12);
+$col-groups: (2, 3, 4, 5, 6, 8, 12) !default;
 
 // Gutter width
-$gutter-width: 20px;
+$gutter-width: 20px !default;
 
 // Breakpoints
-$breakpoint-medium: 700px;
-$breakpoint-small: 480px;
+$breakpoint-medium: 700px !default;
+$breakpoint-small: 480px !default;
 
 .#{$grid-namespace} {
   list-style: none;
