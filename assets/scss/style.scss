@@ -176,7 +176,7 @@ html {
 
 // Styles exclusive to demo
 
-@each $i in $col-groups {
+@each $i in $DE-col-groups {
   .grid--demo [class*="-of-#{$i}"] {
     height: $baseline;
     margin-bottom: $baseline;
