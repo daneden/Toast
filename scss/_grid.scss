@@ -172,7 +172,7 @@ $DE-breakpoint-small: 480px !default;
   } // end @each
 
   // All direct descendents of .grid get treated the same way.
-  // This might be overkill for some, but it’s a time-saver for me.
+  // This might be overkill for some, but it's a time-saver for me.
   .#{$DE-grid-column-namespace} {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
