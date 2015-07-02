@@ -18,29 +18,29 @@ Then, to use the grid, you'll need a wrap (provided in your own CSS) and a `.gri
 ```html
 <div class="container">
   <div class="grid">
-		<div class="grid__col grid__col--1-of-4">
+        <div class="grid__col grid__col--1-of-4">
 
-		</div>
-		<div class="grid__col grid__col--3-of-4">
+        </div>
+        <div class="grid__col grid__col--3-of-4">
 
-		</div>
-		<div class="grid__col grid__col--6-of-12">
+        </div>
+        <div class="grid__col grid__col--6-of-12">
 
-		</div>
+        </div>
   </div>
 </div>
 ```
 
 ## Customising
 
-`$grid-namespace` and `$grid-column-namespace` adjusts the class names for the grid. With default values, grid wrappers have a class of `.grid` and columns `.grid__col`.
+`$toast-grid-namespace` and `$toast-grid-column-namespace` adjusts the class names for the grid. With default values, grid wrappers have a class of `.grid` and columns `.grid__col`.
 
-`$col-groups(n)` adjusts column divisions. For example, `$col-groups(12)` will produce a 12-column grid. `$col-groups(3,6,8)` will produce a 3-, 6-, and 8-column grid.
+`$toast-col-groups(n)` adjusts column divisions. For example, `$toast-col-groups(12)` will produce a 12-column grid. `$toast-col-groups(3,6,8)` will produce a 3-, 6-, and 8-column grid.
 
-`$gutter-width` is—you guessed it—the gutter
+`$toast-gutter-width` is—you guessed it—the gutter
 width. Accepts any unit.
 
-`$breakpoint-medium` and `$breakpoint-small` are breakpoint placeholders. Columns have hooks to change their behaviour under these breakpoints. See the “Modifiers” section below.
+`$toast-breakpoint-medium` and `$toast-breakpoint-small` are breakpoint placeholders. Columns have hooks to change their behaviour under these breakpoints. See the “Modifiers” section below.
 
 ## Modifiers
 
