@@ -24,17 +24,17 @@
   Customisation
   =============
 
-  $grid-namespace and $grid-column-namespace
+  $toast-grid-namespace and $toast-grid-column-namespace
   adjusts the class names for the grid. With
   default values, grid wrappers have a class
   of '.grid' and columns '.grid__col'.
 
-  $col-groups(n) adjusts column divisions.
-  For example, $col-groups(12) will produce
+  $toast-col-groups(n) adjusts column divisions.
+  For example, $toast-col-groups(12) will produce
   a 12-column grid. $col-groups(3,6,8)
   will produce a 3-, 6-, and 8-column grid.
 
-  $gutter-width is—you guessed it—the gutter
+  $toast-gutter-width is—you guessed it—the gutter
   width. Accepts any unit.
 
   That's it. Have fun.
