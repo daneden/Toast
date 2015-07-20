@@ -48,27 +48,27 @@ Toast has some modifiers to make different kinds of layouts easier. There are br
 
 ```html
 <div class="grid">
-  <div class="grid__col--1-of-3 grid__col--m-1-of-2 grid__col--s-1-of-2">
+  <div class="grid__col--1-of-3 grid__col--m-1-of-2 grid__col--s-1-of-2 grid__col">
     This column will behave like a 1-of-2 column under the medium breakpoint and the small breakpoint.
   </div>
 
-  <div class="grid__col--1-of-3 grid__col--ab">
+  <div class="grid__col--1-of-3 grid__col--ab grid__col">
     This column aligns to the bottom of its row.
   </div>
 
-  <div class="grid__col--1-of-3 grid__col--am">
+  <div class="grid__col--1-of-3 grid__col--am grid__col">
     This column aligns to the middle of its row.
   </div>
 
-  <div class="grid__col--3-of-5 grid__col--centered">
+  <div class="grid__col--3-of-5 grid__col--centered grid__col">
     This column is centered and alone in its row.
   </div>
 
-  <div class="grid__col--1-of-2 grid__col--d-last">
+  <div class="grid__col--1-of-2 grid__col--d-last grid__col">
     This column comes first in the DOM, but appears last in its row.
   </div>
 
-  <div class="grid__col--1-of-2 grid__col--d-first">
+  <div class="grid__col--1-of-2 grid__col--d-first grid__col">
     This column appears last in the DOM, but appears first in its row.
   </div>
 </div>
