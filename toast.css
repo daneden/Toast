@@ -1,0 +1,76 @@
+:root {
+  --toastGutterSize: 16px;
+}
+
+.toastGrid {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + var(--toastGutterSize));
+  margin-left: calc(var(--toastGutterSize) * -1);
+}
+
+.toastGrid > .col {
+  --gridColRatio: 1;
+  box-sizing: border-box;
+  padding-left: var(--toastGutterSize);
+  flex: 0 0 calc(100% * var(--gridColRatio));
+}
+
+.toastGrid > .col--centered {
+  margin: auto;
+}
+
+.toastGrid > .col--1-of-2,
+.toastGrid > .col--2-of-4,
+.toastGrid > .col--3-of-6,
+.toastGrid > .col--6-of-12 {
+  --gridColRatio: calc(1 / 2);
+}
+
+.toastGrid > .col--1-of-4,
+.toastGrid > .col--3-of-12 {
+  --gridColRatio: calc(1 / 4);
+}
+
+.toastGrid > .col--3-of-4,
+.toastGrid > .col--9-of-12 {
+  --gridColRatio: calc(3 / 4);
+}
+
+.toastGrid > .col--1-of-3,
+.toastGrid > .col--2-of-6,
+.toastGrid > .col--4-of-12 {
+  --gridColRatio: calc(1 / 3);
+}
+
+.toastGrid > .col--2-of-3,
+.toastGrid > .col--4-of-6,
+.toastGrid > .col--8-of-12 {
+  --gridColRatio: calc(2 / 3);
+}
+
+.toastGrid > .col--5-of-6,
+.toastGrid > .col--10-of-12 {
+  --gridColRatio: calc(10 / 12);
+}
+
+.toastGrid > .col--1-of-6,
+.toastGrid > .col--2-of-12 {
+  --gridColRatio: calc(2 / 12);
+}
+
+.toastGrid > .col--1-of-12 {
+  --gridColRatio: calc(1 / 12);
+}
+
+.toastGrid > .col--5-of-12 {
+  --gridColRatio: calc(5 / 12);
+}
+
+.toastGrid > .col--7-of-12 {
+  --gridColRatio: calc(7 / 12);
+}
+
+.toastGrid > .col--11-of-12 {
+  --gridColRatio: calc(11 / 12);
+}
